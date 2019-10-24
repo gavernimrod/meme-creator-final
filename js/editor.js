@@ -306,3 +306,6 @@ function doUploadImg(elForm, onSuccess) {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+
+
+
