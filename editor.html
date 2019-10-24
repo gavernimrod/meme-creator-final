@@ -23,15 +23,15 @@
                 <div class="main-buttons flex row">
                     <button class="btn generateBtn" onclick="generateMeme(); closeAllControllers()"><i
                             class="fas fa-palette"></i><br />Add Drawing</button>
-                    <button class="btn add-text" onclick="onAddText(); closeAllControllers()"><i
+                    <button class="btn add-text " onclick="onAddText(); closeAllControllers()"><i
                             class="fas fa-font"></i><br />Add Text</button>
                     <button class="btn" onclick="window.location.href='index.html'"><i
                             class="fas fa-exchange-alt"></i><br />Change Image</button>
-                    <div class="btn flex center-all download hide"><a class="share-link"
+                    <div class="btn flex center-all download "><a class="share-link"
                             onclick="onDownloadImage(this)"><i class="fas fa-download"></i><br />Download</a></div>
                     <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
                         <input name="img" id="imgData" type="hidden" />
-                        <button class="btn flex center-all fb-share hide" type="submit">Publish</button>
+                        <button class="btn flex center-all fb-share " type="submit">Publish</button>
                     </form>
                     <div id="fb-root"></div>
                     <div class="share-container"></div>
@@ -43,7 +43,7 @@
         <!-- END Headers and Controllers -->
 
         <!-- Canvas Controllers -->
-        <section class="canvas-controllers flex row center-all">
+        <section class="canvas-controllers flex row center-all invisible">
             <label>✎ Stroke
                 <input type="color" class="draw-color btn-canvas-ctrl color-picker"
                     onchange="onColorChange(this.value, 'stroke')">
@@ -65,7 +65,6 @@
             <div class="canvas-container" id="canvas-container"></div>
         </section>
     </div>
-
     <script src="lib/jquery/jquery.js"></script>
     <script src="js/util.js"></script>
     <script src="js/canvas-controller.js"></script>

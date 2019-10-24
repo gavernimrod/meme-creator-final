@@ -192,6 +192,7 @@ function markEditable(itemId) {
 ///////////////////////////////
 
 
+//This function uses a dummy canvas to calculate text measurement
 function getTextWidth(textObj) {
 	// if given, use cached canvas for better performance
 	// else, create new canvas
@@ -223,8 +224,6 @@ function generateMeme() {
 		document.querySelector('.canvas-controllers').classList.add('invisible')
 		document.querySelector('.add-text').classList.remove('hide')
 		document.querySelector('.generateBtn').innerHTML = '<i class="fas fa-palette"></i><br/>Add Drawing'
-		document.querySelector('.download').classList.add('hide')
-		document.querySelector('.fb-share').classList.add('hide')
 	} else {
 		renderCanvas()
 		drawImg()
@@ -233,8 +232,6 @@ function generateMeme() {
 		document.querySelector('.add-text').classList.add('hide')
 		document.querySelector('.canvas-container').classList.remove('hide')
 		document.querySelector('.canvas-controllers').classList.remove('invisible')
-		document.querySelector('.download').classList.remove('hide')
-		document.querySelector('.fb-share').classList.remove('hide')
 		document.querySelector('.generateBtn').innerHTML = '<i class="fas fa-edit"></i><br/>Edit Texts'
 	}
 	gIsMemeReady = !gIsMemeReady;

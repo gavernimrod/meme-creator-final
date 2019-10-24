@@ -4,7 +4,6 @@ var gSlideIndex = 0;
 var gToggleDisplay = true;
 
 
-
 function renderGallery() {
     if (gToggleDisplay) {
         let elGallery = document.querySelector('.gallery-container');
