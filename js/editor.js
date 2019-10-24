@@ -224,6 +224,7 @@ function generateMeme() {
 		document.querySelector('.canvas-controllers').classList.add('invisible')
 		document.querySelector('.add-text').classList.remove('hide')
 		document.querySelector('.generateBtn').innerHTML = '<i class="fas fa-palette"></i><br/>Add Drawing'
+		document.querySelector('.fb-share').classList.add('hide')
 	} else {
 		renderCanvas()
 		drawImg()
@@ -232,6 +233,7 @@ function generateMeme() {
 		document.querySelector('.add-text').classList.add('hide')
 		document.querySelector('.canvas-container').classList.remove('hide')
 		document.querySelector('.canvas-controllers').classList.remove('invisible')
+		document.querySelector('.fb-share').classList.remove('hide')
 		document.querySelector('.generateBtn').innerHTML = '<i class="fas fa-edit"></i><br/>Edit Texts'
 	}
 	gIsMemeReady = !gIsMemeReady;
@@ -247,6 +249,7 @@ function onDownloadImage(elLink) {
 		var firstLine = getFirstLine()
 		var fileName = firstLine.replace(/[^a-zA-Z0-9]/, '').toLowerCase();
 		elLink.download = `${fileName}.jpg`
+	
 }
 
 
@@ -268,7 +271,7 @@ function uploadImg(elForm, ev) {
            Share to &nbsp;&nbsp;<i class="fab fa-facebook-f"></i>
 		</a>`
 	}
-	// 
+	
 	document.querySelector('.download').classList.add('hide')
 	document.querySelector('.fb-share').classList.add('hide')
 	document.querySelector('.share-container').classList.remove('hide')
@@ -303,30 +306,3 @@ function doUploadImg(elForm, onSuccess) {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
-
-
-////////////////////////////////////
-///////// Retired Functions/////////
-////////////////////////////////////
-
-/*
-function onChangeAlignText(selectedAlign) {
-	var elId = `#${gEditableTextId}`
-	var text = document.querySelector(elId);
-	var textIdx = getItemIdxByIdAndType(text.id, 'txts')
-	var textModel = gMeme.txts[textIdx]
-	textModel.align = selectedAlign
-	renderItems()
-}
-
-
-function onChangeColorText(selectedColor) {
-	var elId = `#${gEditableTextId}`
-	var text = document.querySelector(elId);
-	var textIdx = getItemIdxByIdAndType(text.id, 'txts')
-	var textModel = gMeme.txts[textIdx]
-	textModel.color = selectedColor
-	renderItems()
-}
-*/
