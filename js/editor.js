@@ -243,12 +243,10 @@ function onDownloadImage(elLink) {
 	if (!gCanvas) {
 		generateMeme()
 	}
-	setTimeout(() => {
 		elLink.href = gCanvas.toDataURL()
 		var firstLine = getFirstLine()
 		var fileName = firstLine.replace(/[^a-zA-Z0-9]/, '').toLowerCase();
 		elLink.download = `${fileName}.jpg`
-	}, 500);
 }
 
 
