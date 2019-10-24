@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Geostar+Fill");
+
+* > * {
+  box-sizing: border-box;
+}
+.website-grid {
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "section section"
+    "main main"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: "Geostar Fill";
+  margin: 20px 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+header {
+  line-height: 100%;
+  vertical-align: 50%;
+  grid-area: header;
+  background-image: url("../img/bgc.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 30px;
+}
+
+input {
+  outline: none;
+  height: 25px;
+  background-color: white;
+}
+span {
+  float: right;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  grid-area: section;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: center;
+  box-sizing: border-box;
+  border: 3px solid black;
+  background-image: url("../img/bgcgal.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ul > li {
+  margin: 0 20px;
+  padding: 0 5px;
+  transition: 0.2s;
+}
+ul > li:hover {
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.searchbox-container {
+  height: 20px;
+}
+
+.searchBox span {
+  cursor: pointer;
+}
+
+strong {
+  background-color: white;
+  z-index: 10;
+}
+
+main {
+  grid-area: main;
+  grid-template-columns: 0.05fr 0.9fr 0.05fr;
+  width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-container {
+  width: 100%;
+  /* position: absolute; */
+  /* height: 100vh; */
+  padding: 20px;
+  overflow-y: none;
+  margin: 0 auto;
+  height: 100%;
+  background-image: url("../img/gabgc.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  align-items: center;
+}
+
+.gallery-grid {
+  align-items: center;
+  grid-template-rows: repeat(3, 0.25fr);
+  grid-template-columns: repeat(6, 0.25fr);
+  align-self: center;
+  grid-gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-rows: repeat(5, 0.25fr);
+    grid-template-columns: repeat(5, 0.5fr);
+  }
+  .gallery-container {
+    height: 100vh;
+  }
+  main {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-rows: repeat(5, 0.25fr);
+    grid-template-columns: repeat(5, 0.25fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .website-grid {
+    grid-template-areas:
+      "header"
+      "nav"
+      "section"
+      "main"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+  }
+}
+
+.gallery-container a {
+  width: 150px;
+  height: 150px;
+  margin: auto auto;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 1rem;
+}
+
+.gallery-container img {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: -1px 3px 11px -2px rgba(0, 0, 0, 0.75);
+}
+
+.img-details {
+  position: absolute;
+  visibility: hidden;
+  border: 1px solid black;
+  overflow-wrap: break-word;
+  border-radius: 13px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+
+.gallery-container img:hover + .img-details {
+  visibility: visible;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: inherit;
+  transform: scale(1.2);
+  z-index: 2;
+  transition: all 0.2s;
+}
+.gallery-container img:hover {
+  z-index: 2;
+  object-fit: contain;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.about-me {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding-left: 10px;
+  font-size: 1.5em;
+  line-height: 30px;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(86, 28, 92);
+}
+
+.about-me img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: -1px 3px 11px -2px rgba(0, 0, 0, 0.75);
+}
+
+.about-us h3 {
+  text-align: center;
+}
+
+.card {
+  margin: 20px auto;
+  padding: 20px 10px;
+  width: 200px;
+  height: 250px;
+  box-shadow: -1px 3px 11px -2px rgba(0, 0, 0, 0.75);
+}
+
+.about-us .contact {
+  padding: 0 auto;
+}
+
+.about-link {
+  text-decoration: none;
+}
+
+.gallery-link {
+  position: absolute;
+}
+
+footer {
+  height: 100px;
+  grid-area: footer;
+  background-image: url("../img/bgcgal.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Geostar Fill";
+  text-align: center;
+  font-size: 35px;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+i {
+  cursor: pointer;
+}
+
+#autocomplete-list > * {
+  display: block;
+  background-color: white !important;
+}
+
+.autocomplete-active > * {
+  display: block;
+  background-color: white !important;
+}
+
+[attribute="DOMStringMap"] > * {
+  background-color: white !important;
+}
+
+/* SHINY TEXT */
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.col {
+  flex-flow: column;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  flex-flow: wrap;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  /* overflow: hidden; */
+}
+.wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+}

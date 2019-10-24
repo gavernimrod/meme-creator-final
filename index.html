@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <!-- <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" /> -->
+    <link rel="stylesheet" href="lib/animate/animate.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/pokeball.png" type="image/gif" sizes="16x16">
+</head>
+
+<body onload="init()">
+    <div class="website-grid grid">
+
+        <header>
+           <div class="wrapper flex j">
+
+               <img class="logoPic" src="./img/logo.png" alt="" srcset=""> 
+            </div>
+        </header>
+        <nav class="grid">
+         
+        </nav>
+
+        <section class="flex space-around">
+            <ul class="flex space-evenly">
+                        <li>
+                            <a href="#" class="toggle-display-btn" onclick="window.location.href='index.html'">Gallery</a>
+                        </li>
+                        <li>
+                                <div class="searchbox-container">
+                                        <input class="searchBox "type="search" name="search"
+                                            onfocus="if(this.value !== '') { this.value = ''; }" placeholder="Search...">
+                                        <label for="search" ></label><i class="fa fa-search searchIcon"></i> </label>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="#about-us" class="about-link" onclick="onToggleInfo()">ABOUT ME</a>
+                        </li>
+                    </ul>
+          
+        </section>
+        <main class="flex">
+            <div class="gallery-container grid gallery-grid">
+                <!-- gllaery goes here -->
+            </div>
+            <div class="about-me hide">
+                <h3>About me</h3> <br>
+                <p>
+                    Nimrod, <br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eligendi magnam sapiente sit eaque tempore minus nemo laborum vitae debitis quas consequuntur ab harum commodi, enim deserunt consectetur deleniti expedita.
+                    bla <br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, nam, optio ullam repellat nesciunt facilis voluptates sed esse totam, ratione corporis quas. Cumque nam ducimus sint, explicabo quod quam sequi!
+                    <bt>
+                        <br>ENJOY!<br>
+                </p>
+                <div class="team-cards flex space-around">
+                    <div class="card flex col space-between align-center">
+                        <a href=""> <img onmouseover="onShowDiv(0)" onmouseout="onHideDiv(0)" src="./img/team/profile.png" 
+                            alt="Nimrod's gallery"></a>
+                        <div class="contact  ">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href="mailto:gavernimrod@gmail.com"><i class="fa fa-envelope-square"></i></a>
+                            <a href="#"><i class="fa fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    <footer>
+<h1>Nimrod.G</h1>
+    </footer>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/app-controller.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/gallery-service.js"></script>
+</body>
+
+</html>

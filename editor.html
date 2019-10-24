@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meme Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/editor.css">
+    <link rel="icon" href="img/pokeball.png" type="image/gif" sizes="16x16">
+</head>
+
+<body onload="init()">
+    <div id="container" class="container">
+        <div class="header-container flex center-all">
+            <!-- START Headers and Controllers -->
+            <header class="app-header">
+                <div class="logo-container flex">
+                    <img class="logo" src="img/gif.gif" alt="logo">
+                </div>
+                <h1>Meme Generator</h1>
+                <div class="main-buttons flex row">
+                    <button class="btn generateBtn" onclick="generateMeme(); closeAllControllers()"><i
+                            class="fas fa-palette"></i><br />Add Drawing</button>
+                    <button class="btn add-text" onclick="onAddText(); closeAllControllers()"><i
+                            class="fas fa-font"></i><br />Add Text</button>
+                    <button class="btn" onclick="window.location.href='index.html'"><i
+                            class="fas fa-exchange-alt"></i><br />Change Image</button>
+                    <div class="btn flex center-all download hide"><a class="share-link"
+                            onclick="onDownloadImage(this)"><i class="fas fa-download"></i><br />Download</a></div>
+                    <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+                        <input name="img" id="imgData" type="hidden" />
+                        <button class="btn flex center-all fb-share hide" type="submit">Publish</button>
+                    </form>
+                    <div id="fb-root"></div>
+                    <div class="share-container"></div>
+                    <div class="prop-container grid hide"></div>
+                    <div class="text-controllers controllers absolute hide"></div>
+                    <div class="prop-controllers controllers absolute hide"></div>
+            </header>
+        </div>
+        <!-- END Headers and Controllers -->
+
+        <!-- Canvas Controllers -->
+        <section class="canvas-controllers flex row center-all">
+            <label>✎ Stroke
+                <input type="color" class="draw-color btn-canvas-ctrl color-picker"
+                    onchange="onColorChange(this.value, 'stroke')">
+            </label>
+            <label>✎ Filler
+                <input type="color" class="draw-color btn-canvas-ctrl color-picker"
+                    onchange="onColorChange(this.value, 'fill')">
+            </label>
+            <select class="btn-canvas-ctrl" onchange="onChooseDrawTool(this.value)">
+                <option value="pencil">✏ Pencil</option>
+                <option value="brush">▆ Brush</option>
+                <option value="rect">▯ Rectangle</option>
+            </select>
+        </section>
+
+        <!-- MEME container -->
+        <section class="inner-container flex">
+            <div class="meme-container" id="meme-container"></div>
+            <div class="canvas-container" id="canvas-container"></div>
+        </section>
+    </div>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/canvas-controller.js"></script>
+    <script src="js/app-controller.js"></script>
+    <script src="js/editor-service.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/drag-drop-functions.js"></script>
+
+
+</body>
+
+</html>
