@@ -31,17 +31,3 @@ function onToggleInfo() {
     elGallery.classList.toggle('hide');
     elAbout.classList.toggle('hide');
 }
-
-/// UPLOAD 
-
-// function onHandleUpload() {
-//     let str = prompt('Describe your meme in two words');
-//     str = str.toLowerCase();
-//     let keywords = str.split(' ');
-//     const selectedFile = document.getElementById('add_meme').files[0];
-//     const objectURL = window.URL.createObjectURL(selectedFile);
-//     console.log(objectURL);
-//     addMeme(objectURL, keywords);
-//     createImages();
-//     renderGallery();
-// }

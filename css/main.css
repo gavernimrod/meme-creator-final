@@ -99,8 +99,6 @@ main {
 
 .gallery-container {
   width: 100%;
-  /* position: absolute; */
-  /* height: 100vh; */
   padding: 20px;
   overflow-y: none;
   margin: 0 auto;
@@ -188,7 +186,6 @@ main {
   font-size: 0.75em;
   font-weight: bold;
 }
-
 
 .gallery-container img:hover + .img-details {
   visibility: visible;
@@ -327,7 +324,6 @@ i {
   height: 100px;
   width: 100px;
   position: relative;
-  /* overflow: hidden; */
 }
 .wrapper img {
   position: absolute;

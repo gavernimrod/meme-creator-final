@@ -77,7 +77,6 @@ h1 {
     grid-area: title;
     font-size: 1.5rem;
     padding-left: 15px;
-    /* word-break: normal; */
     line-break: auto;
 }
 @media (min-width: 680px){
@@ -93,7 +92,6 @@ h1 {
     h1 {
         font-size: 3.5em;
         margin: 5px 0;
-        /* word-break: normal; */
     }
 }
 
@@ -176,7 +174,6 @@ select {
 
 .logo-container {
     grid-area: logo;
-    /* justify-content: flex-end; */
 }
 @media (min-width: 680px){
     .logo-container {
@@ -412,15 +409,12 @@ label, option {
     background-color:transparent;
     border: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* font-size: 30px; */
     width: auto;
-    /* color:white; */
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;  
-    /* resize: none; */
 }
 
 .txt-top {
