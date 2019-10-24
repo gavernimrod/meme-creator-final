@@ -192,7 +192,6 @@ function markEditable(itemId) {
 ///////////////////////////////
 
 
-//This function uses a dummy canvas to calculate text measurement
 function getTextWidth(textObj) {
 	// if given, use cached canvas for better performance
 	// else, create new canvas
