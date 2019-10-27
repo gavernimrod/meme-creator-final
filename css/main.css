@@ -20,7 +20,7 @@ a {
   font-family: "Geostar Fill";
   margin: 20px 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 2.5rem;
 }
 
 header {
@@ -138,6 +138,9 @@ main {
   .gallery-container a {
     width: 300px;
     height: 300px;
+  }
+  .about-me {
+    font-size: 3.5em;
   }
 }
 
