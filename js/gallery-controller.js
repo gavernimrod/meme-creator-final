@@ -28,7 +28,7 @@ function onToggleDisplay() {
 function onToggleInfo() {
     let elGallery = document.querySelector('.gallery-container');
     let elAbout = document.querySelector('.about-me');
-    let elAboutLink = document.querySelector('.about-link');
+    // let elAboutLink = document.querySelector('.about-link');
     // if (elAboutLink.innerText === 'ABOUT ME') {
     //     elAboutLink.innerText = 'GALLERY';
     // } else elAboutLink.innerText = 'ABOUT ME';
