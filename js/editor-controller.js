@@ -125,7 +125,7 @@ function onDeleteItem(element, type) {
 }
 
 function hideModal(modalClass) {
-  document.querySelector(modalClass).classList.add("show");
+  document.querySelector(modalClass).classList.add("hide");
 }
 
 ///////////////////////////////////////

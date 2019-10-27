@@ -31,7 +31,6 @@ function init(){
     createImages();
     renderGallery();
 }
-
 function createImg(id) {
     return {
         id: id,
