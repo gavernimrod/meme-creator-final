@@ -10,7 +10,7 @@
     "section section"
     "main main"
     "footer footer";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: fr 1fr;
   box-sizing: border-box;
 }
 
@@ -156,8 +156,7 @@ main {
 }
 
 .gallery-container a {
-  /* width: 150px; */
-  /* height: 150px; */
+
   margin: auto auto;
   text-decoration: none;
   color: black;
