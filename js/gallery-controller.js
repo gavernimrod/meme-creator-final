@@ -1,6 +1,5 @@
 'use strict';
 var gImgSrc = '';
-// var gSlideIndex = 0;
 var gToggleDisplay = true;
 
 
@@ -30,9 +29,9 @@ function onToggleInfo() {
     let elGallery = document.querySelector('.gallery-container');
     let elAbout = document.querySelector('.about-me');
     let elAboutLink = document.querySelector('.about-link');
-    if (elAboutLink.innerText === 'ABOUT ME') {
-        elAboutLink.innerText = 'GALLERY';
-    } else elAboutLink.innerText = 'ABOUT ME';
+    // if (elAboutLink.innerText === 'ABOUT ME') {
+    //     elAboutLink.innerText = 'GALLERY';
+    // } else elAboutLink.innerText = 'ABOUT ME';
     elGallery.classList.toggle('hide');
     elAbout.classList.toggle('hide');
 }
