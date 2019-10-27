@@ -35,7 +35,7 @@ function renderItems() {
 }
 
 function renderLines() {
-  var lines = getAllObjs("txts");
+  var lines = getAllProps("txts");
   return lines.map(line => getLineStrHtml(line)).join("");
 }
 
@@ -223,7 +223,7 @@ function onDownloadImage(elLink) {
     generateMeme();
   }
   elLink.href = gCanvas.toDataURL();
-  var firstLine = getFirstLine();
+  var firstLine = getFirstTextLine();
   var fileName = firstLine.replace(/[^a-zA-Z0-9]/, "").toLowerCase();
   elLink.download = `${fileName}.jpg`;
 }

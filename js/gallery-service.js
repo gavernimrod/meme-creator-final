@@ -27,10 +27,6 @@ var gKeyWords = [
 ['gondor','one simply'],
 ];
 
-function init(){
-    createImages();
-    renderGallery();
-}
 function createImg(id) {
     return {
         id: id,

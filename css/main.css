@@ -127,22 +127,19 @@ main {
     grid-template-rows: repeat(5, 0.25fr);
     grid-template-columns: repeat(5, 0.5fr);
   }
-  .gallery-container {
-    height: 100vh;
-  }
-  main {
-    height: 100vh;
-  }
+
 }
 
 @media (max-width: 800px) {
   .gallery-grid {
-    grid-template-rows: repeat(5, 0.25fr);
-    grid-template-columns: repeat(5, 0.25fr);
+    grid-template-rows: repeat(2, 0.5);
+    grid-template-columns: repeat(2, 0.5fr);
   }
+
 }
 
-@media (max-width: 550px) {
+@media (max-width: 550px)
+ {
   .website-grid {
     grid-template-areas:
       "header"
@@ -153,6 +150,10 @@ main {
       "footer";
     grid-template-columns: 1fr;
     box-sizing: border-box;
+  }
+  .gallery-container a {
+    width: 200px;
+    height: 200px;
   }
 }
 

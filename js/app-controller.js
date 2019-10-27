@@ -1,8 +1,13 @@
 'use strict';
 var gImgSrc = '';
-var gSlideIndex = 0;
+// var gSlideIndex = 0;
 var gToggleDisplay = true;
 
+
+function init(){
+    createImages();
+    renderGallery();
+}
 
 function renderGallery() {
     if (gToggleDisplay) {

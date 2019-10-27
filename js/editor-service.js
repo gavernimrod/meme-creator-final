@@ -43,15 +43,15 @@ function getImgId() {
   return id;
 }
 
-function getAllObjs(type) {
+function getAllProps(type) {
   return gMeme[type];
 }
 
-function addItem(type, newItem) {
+function setProp(type, newItem) {
   gMeme[type].push(newItem);
 }
 
-function getFirstLine() {
+function getFirstTextLine() {
   if (gMeme.txts[0]) {
     return gMeme.txts[0].line;
   } else {
